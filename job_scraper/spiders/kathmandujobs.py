@@ -9,10 +9,17 @@ class KathmanduJobsSpider(scrapy.Spider):
     name = 'kathmandujobs'
     allowed_domains = ['kathmandujobs.com']
     start_urls = ['https://kathmandujobs.com/jobs']
+    page_limit = 5
+    count = 0
 
     def parse(self, response):
         posts = response.css('div.job-listing-btns a')
         yield from response.follow_all(posts, self.parseDetail)
+
+        # if(self.count < self.page_limit):
+        #     self.count = self.count +1
+        #     pagination_links = response.css('ul.pagination li:not(.active) a')[0]
+        #     yield from response.follow_all(pagination_links, self.parse)
 
     def parseDetail(self, response):
         # addresses = response.css('p.address + *::text').getall()
