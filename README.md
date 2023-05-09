@@ -8,3 +8,4 @@ Web scraper build using scrapy to scrape date of job portals.
 - [ ] jobsnepal
 - [ ] kantipurjob
 - [ ] merojob
+- [ ] [jobsniper](https://www.jobssniper.com/)
