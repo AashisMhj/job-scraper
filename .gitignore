@@ -1,10 +1,27 @@
 **/__pycache__/*
+# venv
 bin/
 include/
 lib/
 lib64
 pyvenv.cfg
+
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info
+dist/
+build/
+*.egg
+
+# Scrapy
+.scrapy/
+scrapy.cfg
+
+# Project-generated files
 *.json
-
-
-
+/data/
+/logs/
