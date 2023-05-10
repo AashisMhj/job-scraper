@@ -7,6 +7,7 @@ Web scraper build using scrapy to scrape date of job portals.
 # install packages from requirement.txt
 pip -r requirements.txt
 
+cd job_scraper
 # seel all the crawlers
 scrapy list
 
