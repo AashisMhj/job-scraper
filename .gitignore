@@ -13,6 +13,9 @@ __pycache__/
 *$py.class
 *.so
 *.egg-info
+*.pyc
+*.pyo
+*.pyd
 dist/
 build/
 *.egg
@@ -23,5 +26,5 @@ scrapy.cfg
 
 # Project-generated files
 *.json
-/data/
-/logs/
+data/
+logs/
