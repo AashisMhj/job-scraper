@@ -1,6 +1,4 @@
 import scrapy
-from scrapy.linkextractors import LinkExtractor
-from scrapy.spiders import CrawlSpider, Rule
 from slugify import slugify
 
 
@@ -37,8 +35,8 @@ class KathmanduJobsSpider(scrapy.Spider):
         yield {
             'name': response.css('div.titles h6::text').get(),
             'location': getAddressValue(6),
-            'url': 'url',
             'image': response.css('img::attr(src)').get(),
+            'website': '',
             'job-title': response.css('div.titles h4::text').get(),
             'position': '',
             'level': getAddressValue(1),
